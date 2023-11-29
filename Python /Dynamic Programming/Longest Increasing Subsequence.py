@@ -1,3 +1,4 @@
+from bisect import bisect_left
 def Lis_R(arr, i, prev):
     if i == len(arr):
         return 0
@@ -59,3 +60,22 @@ print(Lis_tab(arr))
 
 # S(C) -> O(n)
 # T(C) -> O(n * 2)
+
+
+def binary_search_Lis(arr):
+    length = 1
+    temp = [arr[0]]
+    for i in range(1, len(arr)):
+        if arr[i] > arr[i - 1]:
+            temp.append(arr[i])
+            length += 1
+        else:
+            index = bisect_left(arr, arr[i])
+            temp[index] = arr[index]
+
+    return length
+
+print(binary_search_Lis(arr))
+
+# S(C) -> O(n)
+# T(C) -> O(n * log(n))
