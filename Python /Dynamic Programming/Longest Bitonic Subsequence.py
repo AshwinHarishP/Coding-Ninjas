@@ -26,5 +26,5 @@ def bitonic(arr):
 arr = [1, 11, 2, 10, 4, 5, 2, 1]
 print(bitonic(arr))
 
-# T(C) -> O(n * 2)
+# T(C) -> O(n ^ 2)
 # S(C) -> O(n)
