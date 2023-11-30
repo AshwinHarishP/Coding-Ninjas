@@ -35,5 +35,5 @@ arr = ["a", "b", "ba", "bca", "bda", "bdca"]
 arr = sorted(arr, key = lambda x: len(x))
 print(longest_string(arr))
 
-# T(C) -> O(n*2)
+# T(C) -> O(n^2)
 # S(C) -> O(n)
