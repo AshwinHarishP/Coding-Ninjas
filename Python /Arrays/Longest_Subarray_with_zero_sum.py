@@ -1,5 +1,3 @@
-from typing import *
-
 def getLongestZeroSumSubarrayLength(arr : List[int]) -> int:
     Sum = maxLen = 0
     hashmap = dict()
